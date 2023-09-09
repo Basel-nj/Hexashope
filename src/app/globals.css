@@ -1,0 +1,55 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Montserrat";
+}
+:root {
+   --main-color: #53c28b;
+   --alt-color: #bbb;
+   --size-border-radius: 6px;
+}
+
+html,
+body {
+   max-height: 100vh;
+   overflow-x: hidden;
+   background-color: #111;
+   color: #bbb;
+}
+
+a {
+   color: #bbb;
+   text-decoration: none;
+}
+
+.contanier {
+   max-width: 1100px;
+   min-height: 100vh;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 40px;
+   padding-top: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+   html {
+      color-scheme: dark;
+   }
+}
+
+.theme {
+   transition: 0.7s all ease-in-out;
+}
+
+.light {
+   background-color: white;
+   color: #111;
+}
+
+.dark {
+   background-attachment: #111;
+   color: #bbb;
+}

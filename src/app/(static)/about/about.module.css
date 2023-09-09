@@ -1,0 +1,31 @@
+.container {
+   width: 100%;
+   margin: 5px auto;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   border: 2px solid var(--alt-color);
+   border-radius: var(--size-border-radius);
+}
+
+.container ul {
+   list-style-type: none;
+   margin-top: 10px;
+}
+.container ul li {
+   margin-bottom: 10px;
+}
+
+.container span {
+   color: var(--main-color);
+   font-size: 20px;
+   font-weight: bold;
+}
+@media (min-width: 768px) {
+   .container {
+      width: 80%;
+   }
+}

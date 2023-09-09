@@ -1,0 +1,39 @@
+.container {
+   height: 100px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.links {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+.active {
+   color: var(--main-color);
+}
+
+.notActive {
+   color: var(--alt-color);
+}
+
+@media (min-width: 460px) {
+   .container {
+      justify-content: space-between;
+   }
+}
+
+@media (max-width: 690px) {
+   .container {
+      flex-direction: column;
+      margin-bottom: 24px;
+      margin-top: 10px;
+   }
+   .links {
+      margin-top: 10px;
+   }
+}
