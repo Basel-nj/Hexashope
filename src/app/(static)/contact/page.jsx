@@ -1,7 +1,7 @@
 import Image from "next/image";
-import style from "./contact.module.css";
+import style from "../styles/contact.module.css";
 import contact from "/public/images/contact.svg";
-import { addresses } from "./addresses";
+import { addresses } from "../../../elements/Address/addresses";
 
 export const metadata = {
    title: "Hexashop - Contact",

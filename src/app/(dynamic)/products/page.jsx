@@ -1,8 +1,7 @@
 import Link from "next/link";
-import style from "./products.module.css";
+import style from "../styles/products.module.css";
 import Image from "next/image";
 import { Fragment } from "react";
-
 export const metadata = {
    title: "Hexashop - Products",
    description:

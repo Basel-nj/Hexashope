@@ -1,4 +1,4 @@
-import style from "./about.module.css";
+import style from "../styles/about.module.css";
 
 export const metadata = {
    title: "Hexashop - About",

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import style from "./product.module.css";
+import style from "../../styles/product.module.css";
 import AddToCart from "@/elements/Buttons/AddToCart";
 
 async function getProductId(id) {

@@ -1,5 +1,5 @@
 "use client";
-import style from "./profile.module.css";
+import style from "../styles/cart.module.css";
 import { Fragment, useEffect, useState } from "react";
 import Link from "next/link";
 import { useContext } from "react";
@@ -14,8 +14,10 @@ export default function Profile() {
    const [childRenderCount, setChildRenderCount] = useState(0);
 
    useEffect(() => {
-      const allProducts = localStorage.getItem("products");
-      setProductsCart(JSON.parse(allProducts));
+      if (localStorage.getItem("products")) {
+         const allProducts = localStorage.getItem("products");
+         setProductsCart(JSON.parse(allProducts));
+      }
    }, [products]);
 
    const getAllPricesFromLocalStorage = () => {
@@ -37,7 +39,9 @@ export default function Profile() {
    };
 
    useEffect(() => {
-      setAllPrices(getAllPricesFromLocalStorage());
+      if (childRenderCount > 0) {
+         setAllPrices(getAllPricesFromLocalStorage());
+      }
    }, [childRenderCount, products]);
 
    return (
