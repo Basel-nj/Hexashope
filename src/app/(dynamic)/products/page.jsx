@@ -2,7 +2,6 @@ import Link from "next/link";
 import style from "./products.module.css";
 import Image from "next/image";
 import { Fragment } from "react";
-import Search from "@/elements/Search/Search";
 
 export const metadata = {
    title: "Hexashop - Products",
@@ -24,11 +23,8 @@ export default async function Products() {
    const productsData = await getData();
    const products = productsData.products;
 
-   const filtered = () => {};
-
    return (
       <Fragment>
-         <Search data={products} />
          <div className={style.mainContainer}>
             {products.map((product) => {
                return (

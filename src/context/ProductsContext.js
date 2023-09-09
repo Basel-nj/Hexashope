@@ -5,8 +5,9 @@ export const ProductsContext = createContext();
 
 export const ProductsProvider = ({ children }) => {
    const [products, setProducts] = useState(() => {
-      const storedProducts = localStorage.getItem("products");
-      return storedProducts ? JSON.parse(storedProducts) : [];
+      return localStorage.getItem("products")
+         ? JSON.parse(localStorage.getItem("products"))
+         : [];
    });
 
    // --------------------------------------------------------------
