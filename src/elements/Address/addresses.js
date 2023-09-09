@@ -13,6 +13,6 @@ export const addresses = [
    },
    {
       address: "Website",
-      detailes: "www.Hexashop.com",
+      detailes: "hexashope-irxed3rfn-basel-nj.vercel.app/",
    },
 ];
