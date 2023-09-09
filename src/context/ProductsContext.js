@@ -4,11 +4,11 @@ import { createContext, useEffect, useState } from "react";
 export const ProductsContext = createContext();
 
 export const ProductsProvider = ({ children }) => {
-   const [products, setProducts] = useState(() => {
-      return localStorage.getItem("products")
+   const [products, setProducts] = useState(
+      typeof localStorage !== "undefined" && localStorage.getItem("products")
          ? JSON.parse(localStorage.getItem("products"))
-         : [];
-   });
+         : []
+   );
 
    // --------------------------------------------------------------
    const addProduct = (product) => {
